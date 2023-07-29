@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{3B4D07EC-B464-4792-8180-9BB80E0EEEA6}|Default">
   <MonoDevelop.Ide.ItemProperties.src.Infrastructure FirstBuild="True" />
   <MonoDevelop.Ide.ItemProperties.src.Domain FirstBuild="True" />
-  <MonoDevelop.Ide.ItemProperties.src.Api FirstBuild="True" PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.ItemProperties.src.Api PreferredExecutionTarget="/Applications/Chromium.app" />
   <MonoDevelop.Ide.ItemProperties.src.Application FirstBuild="True" />
   <MultiItemStartupConfigurations />
 </Properties>
