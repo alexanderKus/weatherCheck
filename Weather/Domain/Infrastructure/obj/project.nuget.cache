@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "xiDTDGF0k0wdm2PfHVt5RcMM34T6qTsfQpbK6lYq/LKGW83+4pRRYqxaZMXuV0R9l/H95paOOQamiG/nYM2ceQ==",
+  "dgSpecHash": "UcSovWZWfMjKMaiUV3dsUf4yOTtn44181V5PbQvFzK+CiH1xoj5Yw7Q5+qvqja1z5DQx87E+/SYSAVTZCDwEGQ==",
   "success": true,
   "projectFilePath": "/Users/aleksander/Documents/adrentech/Weather/Domain/Infrastructure/Infrastructure.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/aleksander/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

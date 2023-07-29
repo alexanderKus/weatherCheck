@@ -25,3 +25,10 @@
 /Users/aleksander/Documents/adrentech/Weather/Domain/Api/obj/Debug/net6.0/Api.pdb
 /Users/aleksander/Documents/adrentech/Weather/Domain/Api/obj/Debug/net6.0/Api.genruntimeconfig.cache
 /Users/aleksander/Documents/adrentech/Weather/Domain/Api/obj/Debug/net6.0/ref/Api.dll
+/Users/aleksander/Documents/adrentech/Weather/Domain/Api/bin/Debug/net6.0/Newtonsoft.Json.dll
+/Users/aleksander/Documents/adrentech/Weather/Domain/Api/bin/Debug/net6.0/Application.dll
+/Users/aleksander/Documents/adrentech/Weather/Domain/Api/bin/Debug/net6.0/Domain.dll
+/Users/aleksander/Documents/adrentech/Weather/Domain/Api/bin/Debug/net6.0/Infrastructure.dll
+/Users/aleksander/Documents/adrentech/Weather/Domain/Api/bin/Debug/net6.0/Infrastructure.pdb
+/Users/aleksander/Documents/adrentech/Weather/Domain/Api/bin/Debug/net6.0/Application.pdb
+/Users/aleksander/Documents/adrentech/Weather/Domain/Api/bin/Debug/net6.0/Domain.pdb
