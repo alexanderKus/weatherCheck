@@ -1,5 +1,4 @@
 ﻿using Application.Commands;
-using Application.Interfaces;
 using Domain.Common;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -18,7 +17,8 @@ public class WeatherController : ControllerBase
     }
 
     [HttpPost(Name = "GetWeatherForLocation")]
-    public async Task<ActionResult<WeatherStatistics>> GetWeatherForLocation([FromBody]Coordinates coordinates)
+    public async Task<ActionResult<WeatherStatistics>> GetWeatherForLocation(
+        [FromBody]Coordinates coordinates)
     {
         WeatherStatisticsCommand command = new(coordinates);
         var response = await _mediator.Send(command);

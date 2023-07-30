@@ -14,7 +14,8 @@ namespace Infrastructure.Services
 
         public async Task<WeatherStatistics> GetWeatherStatisticsAsync(Coordinates coordinates)
         {
-            ExternalApiResponse externalApiResponse = await _externalApiCaller.GetResponseAsync(coordinates);
+            ExternalApiResponse externalApiResponse =
+                await _externalApiCaller.GetResponseAsync(coordinates);
             WeatherStatistics weatherStatictis = new(externalApiResponse);
             return weatherStatictis;
         }
