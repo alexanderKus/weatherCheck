@@ -34,3 +34,6 @@
 /Users/aleksander/Documents/adrentech/Weather/Domain/Api/bin/Debug/net6.0/Domain.pdb
 /Users/aleksander/Documents/adrentech/Weather/Domain/Api/bin/Debug/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
 /Users/aleksander/Documents/adrentech/Weather/Domain/Api/bin/Debug/net6.0/Microsoft.Extensions.Logging.Abstractions.dll
+/Users/aleksander/Documents/adrentech/Weather/Domain/Api/bin/Debug/net6.0/MediatR.dll
+/Users/aleksander/Documents/adrentech/Weather/Domain/Api/bin/Debug/net6.0/MediatR.Contracts.dll
+/Users/aleksander/Documents/adrentech/Weather/Domain/Api/bin/Debug/net6.0/MediatR.Extensions.Microsoft.DependencyInjection.dll

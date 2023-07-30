@@ -1,5 +1,7 @@
-﻿using Application.Interfaces;
+﻿using Application.Commands;
+using Application.Interfaces;
 using Domain.Common;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers;
@@ -8,17 +10,18 @@ namespace Api.Controllers;
 [Route("[controller]")]
 public class WeatherController : ControllerBase
 {
-    private readonly IWeatherService _weatherService;
+    private readonly IMediator _mediator;
 
-    public WeatherController(IWeatherService weatherService)
+    public WeatherController(IMediator mediator)
     {
-        _weatherService = weatherService;
+        _mediator = mediator;
     }
 
     [HttpPost(Name = "GetWeatherForLocation")]
     public async Task<ActionResult<WeatherStatistics>> GetWeatherForLocation([FromBody]Coordinates coordinates)
     {
-        var response = await _weatherService.GetWeatherStatisticsAsync(coordinates);
+        WeatherStatisticsCommand command = new(coordinates);
+        var response = await _mediator.Send(command);
         return Ok(response);
     }
 }
