@@ -22,7 +22,7 @@ namespace Infrastructure.Services
             {
                 _logger.LogInformation("Calling external api");
                 string responseBody = await _client.GetStringAsync(
-                    $"https://api.open-meteo.com/v1/forecast?latitude={coordinates.Longitude}&longitude={coordinates.Longitude}&hourly=temperature_2m");
+                    $"https://api.open-meteo.com/v1/forecast?latitude={coordinates.Latitude}&longitude={coordinates.Longitude}&hourly=temperature_2m");
                 return JsonConvert.DeserializeObject<ExternalApiResponse>(responseBody)!;
             }
             catch

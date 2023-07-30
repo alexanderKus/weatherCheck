@@ -48,12 +48,6 @@ export class WeatherComponent {
     this.spinner.show();
     this.weatherStatistics = this.weatherService
       .getWeatherForCoordinates(this.coordinates)
-      .pipe(
-        catchError((error) => {
-          console.log(error);
-          return of(error);
-        }),
-        finalize(() => this.spinner.hide())
-      );
+      .pipe(finalize(() => this.spinner.hide()));
   }
 }

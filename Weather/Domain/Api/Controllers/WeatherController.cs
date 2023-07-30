@@ -20,6 +20,7 @@ public class WeatherController : ControllerBase
     [HttpPost(Name = "GetWeatherForLocation")]
     public async Task<ActionResult<WeatherStatistics>> GetWeatherForLocation([FromBody]Coordinates coordinates)
     {
+        Thread.Sleep(TimeSpan.FromSeconds(5));
         WeatherStatisticsCommand command = new(coordinates);
         var response = await _mediator.Send(command);
         return Ok(response);
