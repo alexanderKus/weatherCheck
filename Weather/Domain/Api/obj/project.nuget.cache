@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "67JDFC+M1yf7ARjmVe5ZvuffQL7a7zWZ+Gyj6HPus7SAQq0OPudUaFgULCMRHjnElWYn8qNkfPGvS0+Yzaendg==",
+  "dgSpecHash": "od67McXfBwuHb+/uLibL6m4Gg/WZl4dUePURNrlF8Zg1bDKg05kOd1GzsuBtb/II78C/mfG2iz8yFmsTZl2H5g==",
   "success": true,
   "projectFilePath": "/Users/aleksander/Documents/adrentech/Weather/Domain/Api/Api.csproj",
   "expectedPackageFiles": [
+    "/Users/aleksander/.nuget/packages/fluentvalidation/11.6.0/fluentvalidation.11.6.0.nupkg.sha512",
     "/Users/aleksander/.nuget/packages/mediatr/12.1.1/mediatr.12.1.1.nupkg.sha512",
     "/Users/aleksander/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
     "/Users/aleksander/.nuget/packages/mediatr.extensions.microsoft.dependencyinjection/11.1.0/mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",
