@@ -1,0 +1,59 @@
+<ngx-spinner
+  bdColor="rgba(0, 0, 0, 0.8)"
+  size="medium"
+  color="#fff"
+  type="square-jelly-box"
+  [fullScreen]="true"
+></ngx-spinner>
+<div class="container">
+  <div class="weather-container">
+    <div style="margin-top: 1rem"></div>
+    <h1>Check weather</h1>
+    <div class="weather-form">
+      <mat-form-field class="weather-form-full-width">
+        <mat-label>Longitude</mat-label>
+        <input
+          matInput
+          [(ngModel)]="coordinates.longitude"
+          placeholder="45.89"
+          type="number"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="weather-form-full-width">
+        <mat-label>Latitude</mat-label>
+        <input
+          matInput
+          [(ngModel)]="coordinates.latitude"
+          placeholder="45.89"
+          type="number"
+        />
+      </mat-form-field>
+    </div>
+    <button mat-raised-button color="primary" (click)="getWeather()">
+      Check weather
+    </button>
+    <div *ngIf="weatherStatistics | async as dataSource">
+      <table
+        mat-table
+        [dataSource]="dataSource.dailyAvgTemperature"
+        class="mat-elevation-z8"
+      >
+        <ng-container matColumnDef="day">
+          <th mat-header-cell *matHeaderCellDef>Day</th>
+          <td mat-cell *matCellDef="let element">{{ element.day | date }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="avg_temp">
+          <th mat-header-cell *matHeaderCellDef>Average Temperature</th>
+          <td mat-cell *matCellDef="let element">
+            {{ element.avgTemperature | number : "1.2-2" }} &#x2103;
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+    </div>
+  </div>
+</div>

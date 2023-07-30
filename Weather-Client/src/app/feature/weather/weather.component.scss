@@ -1,0 +1,26 @@
+.weather-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+
+  h1 {
+    margin: auto;
+  }
+
+  .weather-form {
+    padding: 1rem;
+    min-width: 100px;
+    max-width: 150px;
+    width: 100%;
+  }
+
+  .weather-form-full-width {
+    width: 100%;
+  }
+
+  table {
+    margin-top: 1rem;
+  }
+}
