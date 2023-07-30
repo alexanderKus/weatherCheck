@@ -8,28 +8,17 @@ namespace Api.Controllers;
 [Route("[controller]")]
 public class WeatherController : ControllerBase
 {
-    private readonly ILogger<WeatherController> _logger;
     private readonly IWeatherService _weatherService;
 
-    public WeatherController(
-        ILogger<WeatherController> logger, IWeatherService weatherService)
+    public WeatherController(IWeatherService weatherService)
     {
-        _logger = logger;
         _weatherService = weatherService;
     }
 
-    [HttpGet(Name = "GetWeather")]
-    public async Task<ActionResult> Get()
+    [HttpPost(Name = "GetWeatherForLocation")]
+    public async Task<ActionResult<WeatherStatistics>> GetWeatherForLocation([FromBody]Coordinates coordinates)
     {
-        try
-        {
-            Coordinates coordinates = new(12.6M, 14.3M);
-            var response = await _weatherService.GetWeatherStatisticsAsync(coordinates);
-            return Ok(response);
-        }
-        catch
-        {
-            return Problem();
-        }
+        var response = await _weatherService.GetWeatherStatisticsAsync(coordinates);
+        return Ok(response);
     }
 }

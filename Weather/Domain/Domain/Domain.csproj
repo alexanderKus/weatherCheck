@@ -8,8 +8,10 @@
 
   <ItemGroup>
     <None Remove="Common\" />
+    <None Remove="Exceptions\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Common\" />
+    <Folder Include="Exceptions\" />
   </ItemGroup>
 </Project>

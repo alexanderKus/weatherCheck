@@ -1,6 +1,8 @@
 ﻿using Application.Interfaces;
 using Domain.Common;
+using Domain.Exceptions;
 using Infrastructure.Utils;
+using Microsoft.Extensions.Logging;
 
 namespace Infrastructure.Services
 {
@@ -15,8 +17,7 @@ namespace Infrastructure.Services
 
         public async Task<WeatherStatistics> GetWeatherStatisticsAsync(Coordinates coordinates)
         {
-            ExternalApiResponse externalApiResponse = await _externalApiCaller.GetResponseAsync(coordinates)
-                ?? throw new Exception("Make this custom exception");
+            ExternalApiResponse externalApiResponse = await _externalApiCaller.GetResponseAsync(coordinates);
             WeatherStatistics weatherStatictis = new(externalApiResponse)
             {
                 DailyAvgTemperature = WeatherUtils.CreateDailyAvgTemperature(externalApiResponse.Hourly)

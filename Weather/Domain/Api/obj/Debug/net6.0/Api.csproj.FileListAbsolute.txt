@@ -32,3 +32,5 @@
 /Users/aleksander/Documents/adrentech/Weather/Domain/Api/bin/Debug/net6.0/Infrastructure.pdb
 /Users/aleksander/Documents/adrentech/Weather/Domain/Api/bin/Debug/net6.0/Application.pdb
 /Users/aleksander/Documents/adrentech/Weather/Domain/Api/bin/Debug/net6.0/Domain.pdb
+/Users/aleksander/Documents/adrentech/Weather/Domain/Api/bin/Debug/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/Users/aleksander/Documents/adrentech/Weather/Domain/Api/bin/Debug/net6.0/Microsoft.Extensions.Logging.Abstractions.dll
