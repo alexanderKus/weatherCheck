@@ -1,6 +1,5 @@
-# Interview task from Adrenaline Technologies
-
-### Made by Aleksander Kuś
+# Weather check
+### Check weather based on coordinates
 
 ## Frontend
 
