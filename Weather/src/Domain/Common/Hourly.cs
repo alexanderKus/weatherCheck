@@ -1,4 +1,4 @@
 ﻿namespace Domain.Common
 {
-	public record Hourly(List<DateTime> Time, List<decimal> Temperature_2m);
+	public record Hourly(IList<DateTime> Time, IList<decimal> Temperature_2m);
 }

@@ -23,4 +23,16 @@
   table {
     margin-top: 1rem;
   }
+
+  .weather-table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+
+    .download-button {
+      margin: auto;
+      margin-top: 1rem;
+    }
+  }
 }

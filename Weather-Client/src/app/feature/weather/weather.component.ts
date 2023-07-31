@@ -9,9 +9,11 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
 import { WeatherStatistics } from '../common/models/weatherStatistics.model';
-import { Observable, catchError, finalize, of } from 'rxjs';
+import { Observable, catchError, finalize, of, take } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { NgxSpinnerModule, NgxSpinnerService } from 'ngx-spinner';
+import { Csv } from '../common/models/csv.model';
+import { DownloadService } from '../common/services/download.service';
 
 @Component({
   standalone: true,
@@ -41,6 +43,7 @@ export class WeatherComponent {
 
   constructor(
     private weatherService: WeatherService,
+    private downloadService: DownloadService,
     private spinner: NgxSpinnerService
   ) {}
 
@@ -48,6 +51,22 @@ export class WeatherComponent {
     this.spinner.show();
     this.weatherStatistics = this.weatherService
       .getWeatherForCoordinates(this.coordinates)
-      .pipe(finalize(() => this.spinner.hide()));
+      .pipe(
+        catchError((err) => {
+          alert('Something went wrong');
+          return of(err);
+        }),
+        finalize(() => this.spinner.hide())
+      );
+  }
+
+  public download() {
+    this.weatherStatistics?.pipe(take(1)).subscribe((weatherStatistics) => {
+      const csv: Csv = this.weatherService.generateCsv(weatherStatistics);
+      const data: Blob = new Blob(csv.getRows, {
+        type: 'text/csv;encoding:uft-8',
+      });
+      this.downloadService.downloadFile(data, 'weather-statistics.csv');
+    });
   }
 }
