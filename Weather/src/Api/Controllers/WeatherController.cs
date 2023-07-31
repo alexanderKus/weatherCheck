@@ -16,7 +16,7 @@ public class WeatherController : ControllerBase
         _mediator = mediator;
     }
 
-    [HttpPost(Name = "GetWeatherForLocation")]
+    [HttpPost]
     public async Task<ActionResult<WeatherStatistics>> GetWeatherForLocation(
         [FromBody]Coordinates coordinates)
     {
